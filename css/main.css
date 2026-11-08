@@ -1,0 +1,49 @@
+
+/* Store the main website colors so we can reuse them */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --yellow: #d69e3d;
+    --brown: #966f2c;
+    --cream: #f3f0e9;
+}
+
+/* Include padding and borders in the element's width */
+* {
+    box-sizing: border-box;
+}
+
+/* Set the background color and the default text font */
+body {
+    margin: 0;
+    background-color: var(--cream);
+    font-family: "Karla", sans-serif;
+}
+
+/* Use Lato for headings and navigation as required */
+h1, h2, h3, nav {
+    font-family: "Lato", sans-serif;
+}
+
+/* Keep content centered without making it too wide */
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* Hide the skip link until someone uses the keyboard */
+.skip {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Show the skip link when it receives keyboard focus */
+.skip:focus {
+    left: 1rem;
+    top: 1rem;
+    padding: 0.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    z-index: 10;
+}
