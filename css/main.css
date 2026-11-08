@@ -57,9 +57,9 @@ header {
 
 /* Put the logo above the navigation on mobile as requested to start with mobile */
 .top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 1rem;
 }
 
@@ -101,15 +101,113 @@ header {
     outline-offset: 4px;
 }
 
-
-/* Put the logo and menu on the same line on larger screens */
+/* On tablets the logo stays above the menu only the link spacing grows */
 @media (min-width: 768px) {
-    .top {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     .nav {
         gap: 2rem;
+    }
+}
+/* The banner uses a dark background image */
+.banner {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/hero-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    min-height: 25rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 4rem 0;
+}
+
+/* Keep the banner text in the middle */
+.banner .wrapper {
+    width: 100%;
+}
+
+.intro {
+    max-width: 40rem;
+    margin: auto;
+}
+
+/* Style the main heading */
+.intro h1 {
+    font-size: 2.027rem;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+}
+
+/* Add space below the paragraph */
+.intro p {
+    font-size: 1rem;
+    margin: 0 0 2rem;
+}
+
+/* Style the button */
+.button {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 0.9rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+/* Change the button color when hovered */
+.button:hover {
+    background-color: var(--yellow);
+}
+
+/* Make the button visible when using Tab */
+.button:focus-visible {
+    background-color: var(--yellow);
+    outline: 2px solid var(--white);
+    outline-offset: 4px;
+}
+
+/* Show a small change when clicking the button */
+.button:active {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+
+/* Make the banner larger on tablets */
+@media (min-width: 768px) {
+    .banner {
+        min-height: 30rem;
+    }
+
+    .intro h1 {
+        font-size: 2.986rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .top {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        justify-items: stretch;
+    }
+
+    .banner {
+        min-height: 35rem;
+        background-position: center 30%;
+    }
+
+    .intro h1 {
+        font-size: 3.5rem; /* replace with the desktop h1 from your assignment */
     }
 }
