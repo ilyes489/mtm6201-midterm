@@ -27,8 +27,6 @@
     <!-- Allows keyboard users to skip the navigation -->
     <a href="#main" class="skip">Skip to main content</a>
 
-    <!--this section will cantain navbar -->
-
     <header>
         <div class="wrapper top">
 
@@ -50,7 +48,7 @@
     </header>
 
 
-    <!-- This will contain the main sections of the website -->
+    <!-- Main groups the page's unique content between the shared header and footer. -->
     <main id="main">
 
         <!-- This section is the first part visitors see the hero section -->
@@ -70,7 +68,7 @@
             </div>
         </section>
 
-        <!-- Welcome section with pictures of our coffee shop -->
+        <!-- The ordered gallery shows different parts of the coffee and shop experience. -->
         <section class="welcome" aria-labelledby="welcome-title">
             <div class="wrapper">
                 <p class="small-title">Welcome to My Coffee House</p>
@@ -91,7 +89,7 @@
             </div>
         </section>
 
-        <!-- This section shows three reasons to visit the coffee shop -->
+        <!-- These three benefits explain what visitors can expect from the shop. -->
         <section class="features" aria-labelledby="features-title">
             <div class="wrapper">
                 <p class="small-title">What we offer</p>
@@ -131,7 +129,7 @@
             </div>
         </section>
 
-        <!-- This section has links for the menu and locations -->
+        <!-- The menu and location IDs are targets for the page's navigation links -->
         <section class="menu-section" aria-label="Menu and locations">
             <div class="wrapper">
                 <div class="boxes">
@@ -150,10 +148,102 @@
             </div>
         </section>
 
+        <!-- Keep the photo before the story so it appears first when the layout stacks on mobile -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="wrapper about-content">
+                <img src="images/about-us.jpeg"
+                     alt="Baristas preparing coffee at an espresso machine">
+
+                <div class="about-text">
+                    <p class="small-title">About us</p>
+                    <h2 id="about-title">Read our story</h2>
+
+                    <p>
+                        In the heart of our community, My Coffee House
+                        emerged as a humble local coffee shop that sought
+                        to redefine the coffee experience. Founded with
+                        a passion for quality brews and a commitment to
+                        fostering genuine connections, we embarked on
+                        this journey with a vision to create a warm and
+                        inviting space for coffee enthusiasts and casual
+                        patrons alike.
+                    </p>
+
+                    <p>
+                        My Coffee House quickly became a cherished
+                        gathering spot, where the rich aroma of freshly
+                        ground coffee beans mingled with the laughter
+                        of friends and the tapping of keyboards from
+                        those seeking a cozy workspace.
+                    </p>
+
+                    <a href="#about" class="button dark">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Each article groups one customer photo comment nd name -->
+        <section class="reviews" aria-labelledby="reviews-title">
+            <div class="wrapper">
+                <p class="small-title">Testimonials</p>
+                <h2 id="reviews-title">What our customers say about us</h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <img src="images/testimonial-1.jpeg"
+                             alt="Customer drinking coffee">
+                        <div class="quote">
+                            <blockquote>
+                                <p>
+                                    “I always make a point to visit My Coffee
+                                    Company when in Ottawa. Delicious coffee
+                                    and friendly service.”
+                                </p>
+                            </blockquote>
+                            <h3 class="name">Jane D., Toronto</h3>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/testimonial-2.jpeg"
+                             alt="Customer working on a laptop">
+                        <div class="quote">
+                            <blockquote>
+                                <p>
+                                    “Great atmosphere to get some work done
+                                    while enjoying a cup or two of incredible
+                                    coffee.”
+                                </p>
+                            </blockquote>
+                            <h3 class="name">Scott S., Ottawa</h3>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/testimonial-3.jpeg"
+                             alt="Customer enjoying a cup of coffee">
+                        <div class="quote">
+                            <blockquote>
+                                <p>
+                                    “Best coffee in Ottawa and the service
+                                    is top notch. Would highly recommend
+                                    a visit.”
+                                </p>
+                            </blockquote>
+                            <h3 class="name">Susie F., Ottawa</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- This will contain the copyright information -->
-    <footer>
+    <!-- add the copyright in the footer at the end of the page -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>© My Coffee Company 2024</p>
+        </div>
     </footer>
 
 </body>
