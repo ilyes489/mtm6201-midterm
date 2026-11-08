@@ -47,3 +47,69 @@ h1, h2, h3, nav {
     color: var(--black);
     z-index: 10;
 }
+
+
+/* Give the header a black background */
+header {
+    background-color: var(--black);
+    padding: 1rem 0;
+}
+
+/* Put the logo above the navigation on mobile as requested to start with mobile */
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Set the logo size */
+.top img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+}
+
+/* Put the navigation links next to each other */
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the navigation text */
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Change link color when the mouse is over it */
+.nav a:hover {
+    color: var(--yellow);
+}
+
+/* Show which link is selected with the keyboard */
+.nav a:focus-visible {
+    color: var(--yellow);
+    outline: 2px solid var(--white);
+    outline-offset: 4px;
+}
+
+
+/* Put the logo and menu on the same line on larger screens */
+@media (min-width: 768px) {
+    .top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav {
+        gap: 2rem;
+    }
+}
